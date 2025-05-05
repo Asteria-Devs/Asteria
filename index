@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Referral Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1e3a8a, #5a189a); /* Dark blue to dark purple */
+      color: white;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 1rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #cba135;
+    }
+
+    .referral-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .referral-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .referral-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .referral-card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      color: #a0c4ff;
+    }
+
+    .referral-card p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      color: #ddd;
+    }
+
+    .referral-card button {
+      background-color: #7b2cbf;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .referral-card button:hover {
+      background-color: #5a189a;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>My Referral Hub</h1>
+      <p>Earn rewards by sharing these awesome products.</p>
+    </header>
+
+    <section class="referral-grid">
+      <div class="referral-card">
+        <h3>Cash App</h3>
+        <p>Earn $15 when your friend signs up and sends money.</p>
+        <button onclick="copyCode('cash123')">Copy Code</button>
+      </div>
+      <div class="referral-card">
+        <h3>Coinbase</h3>
+        <p>Get $10 in crypto when your referral trades $100.</p>
+        <button onclick="copyCode('btc10free')">Copy Code</button>
+      </div>
+     
+    </section>
+  </div>
+
+  <script>
+    function copyCode(code) {
+      navigator.clipboard.writeText(code);
+      alert("Referral code copied: " + code);
+    }
+  </script>
+</body>
+</html>
