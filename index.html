@@ -42,6 +42,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
+      justify-items: center; /* Center the grid items */
     }
 
     .referral-card {
@@ -94,14 +95,13 @@
       <div class="referral-card">
         <h3>Cash App</h3>
         <p>Earn $15 when your friend signs up and sends money.</p>
-        <button onclick="copyCode('cash123')">Copy Code</button>
+        <button onclick="copyCode('cash123')" aria-label="Copy Cash App referral code">Copy Code</button>
       </div>
       <div class="referral-card">
         <h3>Coinbase</h3>
         <p>Get $10 in crypto when your referral trades $100.</p>
-        <button onclick="copyCode('btc10free')">Copy Code</button>
+        <button onclick="copyCode('btc10free')" aria-label="Copy Coinbase referral code">Copy Code</button>
       </div>
-     
     </section>
   </div>
 
