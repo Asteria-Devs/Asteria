@@ -13,6 +13,22 @@
       margin: 0;
       padding: 0;
     }
+ .star {
+      position: absolute;
+      background: white;
+      clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%,
+        79% 91%, 50% 70%, 21% 91%, 32% 57%,
+        2% 35%, 39% 35%
+      );
+      opacity: 0.6;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 0.1; }
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -119,14 +135,14 @@
 
     <section class="referral-grid">
       <div class="referral-card">
-        <h3>Cash App</h3>
-        <p>Earn $15 when your friend signs up and sends money.</p>
+        <h3>Blank</h3>
+        <p>Target / Conditions </p>
         <a href="https://cash.app/referral-link" target="_blank" class="referral-link">Sign Up</a>
       </div>
 
       <div class="referral-card">
-        <h3>Acorns</h3>
-        <p>Get $10 when your referral invests.</p>
+        <h3>Blank</h3>
+        <p> Condition / target </p>
         <a href="https://www.acorns.com/invite-code" target="_blank" class="referral-link">Sign Up</a>
       </div>
        <div class="referral-card">
@@ -136,7 +152,7 @@
       </div>
         <div class="referral-card">
         <h3>Paypal</h3>
-        <p>When you spend 5$ with Paypal you get 10$!</p>
+        <p>Condition / Target </p>
         <a href="https://py.pl/12UnFH " target="_blank" class="referral-link">Sign Up</a>
       </div>
     </section>
